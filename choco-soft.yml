@@ -1,0 +1,46 @@
+---
+- hosts: test
+  tasks:
+
+  - name: Install Chocolatey and package dependencies
+    win_chocolatey:
+     name:
+     - chocolatey-core.extension
+     - chocolatey-windowsupdate.extension
+     state: present
+
+  - name: Install 7-Zip
+    win_chocolatey:
+     name:
+     - 7zip.install
+     state: present
+
+  - name: Install Libre Office
+    win_chocolatey:
+     name:
+     - libreoffice-fresh
+     state: present
+
+  - name: Install Firefox
+    win_chocolatey:
+     name:
+     - firefox
+     state: present
+
+  - name: Install Thunderbird
+    win_chocolatey:
+     name:
+     - thunderbird
+     state: present
+
+  - name: Install Adobe Reader
+    win_chocolatey:
+     name:
+     - adobereader
+     state: present
+
+  - name: Install MicroSIP
+    win_chocolatey:
+     name:
+     - microsip
+     state: present
